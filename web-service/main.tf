@@ -149,9 +149,6 @@ resource "aws_ecs_service" "main" {
     container_port = "${var.container_port}"
   }
 
-  lifecycle {
-    create_before_destroy = true
-  }
 }
 
 module "task" {
